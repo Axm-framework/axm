@@ -25,7 +25,7 @@
 			"src/Axm.php"
 		]
 	},
-	"minimum-stability": "beta",
+	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
 		"axm/http": "*",
