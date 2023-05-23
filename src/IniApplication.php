@@ -1,8 +1,8 @@
 <?php
 
-namespace Axm\Core;
+namespace Axm;
 
-use Axm\Core\Application;
+use Axm\Application;
 
 /**
  * Class IniApplication

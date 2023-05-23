@@ -1,6 +1,6 @@
 <?php
 
-use Axm\Core\Application;
+use Axm\Application;
 use Axm\Exception\AxmException;
 use Axm\Exception\AxmCLIException;
 
@@ -54,7 +54,7 @@ class Axm
 		self::boot();
 
 		//Verify the requirements of AXM framework
-		self::requirementsAxm();
+		// self::requirementsAxm();
 
 		// Initialize system handlers 
 		self::initSystemHandlers();
@@ -264,7 +264,7 @@ class Axm
 	 */
 	public static function iniApplication()
 	{
-		return self::createApplication('Axm\\Core\\IniApplication');
+		return self::createApplication('Axm\\IniApplication');
 	}
 
 

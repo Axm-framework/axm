@@ -1,6 +1,6 @@
 <?php
 
-namespace Axm\Core;
+namespace Axm;
 
 use Axm;
 use PDO;

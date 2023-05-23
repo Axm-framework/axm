@@ -29,8 +29,10 @@
 	"prefer-stable": true,
 	"require": {
 		"axm/http": "*",
-		"axm/view": "*",
+		"axm/views": "*",
 		"axm/exception": "*",
+		"axm/middlewares": "*",
+		"axm/session": "*",
 		"axm/console": "*"
 
 	},

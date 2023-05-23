@@ -1,11 +1,11 @@
 <?php
 
-namespace Axm\Core;
+namespace Axm;
 
 use Axm;
 use Axm\Validation\Validator;
 use Axm\Exception\AxmException;
-use Axm\Core\DbModel;
+use Axm\DbModel;
 use PhpParser\Node\Expr\FuncCall;
 
 /**

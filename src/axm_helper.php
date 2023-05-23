@@ -1,6 +1,6 @@
   <?php
 
-  use Axm\Core\Application;
+  use Axm\Application;
   use Axm\Exception\AxmException;
   use Axm\I18n\I18n;
   use Axm\LiveAxm\LiveaxmManager;

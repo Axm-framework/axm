@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Axm\Core;
+namespace Axm;
 
 use Axm;
-use Axm\Core\Container;
+use Axm\Container;
 use Locale;
 use Axm\Exception\AxmException;
 

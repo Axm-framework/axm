@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Axm\Core;
+namespace Axm;
 
 use Closure;
 use ReflectionFunction;
