@@ -44,8 +44,6 @@ abstract class Controller
         $this->response = $app->response;
         $this->view     = $app->view;
 
-        // $this->view     = new View();
-
         $this->init();
     }
 

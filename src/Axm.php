@@ -19,8 +19,6 @@ class Axm
 
 	private static $framework = 'Axm Framework';  // Nombre idenficador del framework
 
-	private const MIN_PHP_VERSION = '7.3';
-
 	/**
 	 * @var array class map used by the AXM autoloading mechanism.
 	 * The array keys are the class names and the array values are the corresponding class file paths.
@@ -38,11 +36,7 @@ class Axm
 	protected $path;
 
 	public  static $_environment;
-	private static $_imports = [];
 	private static $_app;
-	private static $_config;
-	private static $benchmark;
-	private static $_container;
 
 
 	/**
@@ -52,9 +46,6 @@ class Axm
 	{
 		//agregar las constantes del framework
 		self::boot();
-
-		//Verify the requirements of AXM framework
-		// self::requirementsAxm();
 
 		// Initialize system handlers 
 		self::initSystemHandlers();
@@ -75,71 +66,6 @@ class Axm
 		$bootstrapPath = __DIR__ . DIRECTORY_SEPARATOR . $bootstrapFileName;
 		require_once $bootstrapPath;
 	}
-
-
-	/**
-	 * Checks if the server meets the requirements for running Axm.
-	 * Only performs the check once by caching the result.
-	 *
-	 * @throws AxmException If the server does not meet the requirements for running Axm.
-	 */
-	private static function requirementsAxm()
-	{
-		static $requirementsChecked = false;
-
-		if (!$requirementsChecked) {
-			self::compareVersion();
-			self::requiredExtensions();
-
-			// Set requirementsChecked to true to indicate that the check has been performed
-			$requirementsChecked = true;
-		}
-	}
-
-
-	/**
-	 * Checks version PHP.
-	 *
-	 * @throws FrameworkException
-	 */
-	public static function compareVersion()
-	{
-		if (phpVersion() < self::MIN_PHP_VERSION) {
-			exit(sprintf(
-				'<h3>Your PHP version must be %s or higher to run AXM Framework. Current version: %s. <h3>',
-				self::MIN_PHP_VERSION,
-				phpVersion()
-			));
-		}
-	}
-
-
-	/**
-	 * Checks system for missing required PHP extensions.
-	 *
-	 * @throws FrameworkException
-	 */
-	protected static function requiredExtensions()
-	{
-		$requiredExtensions = [
-			'curl',
-			'pdo',
-			'json',
-			'mbstring',
-			'xml',
-			'openssl',
-			'zip'
-		];
-
-		$missingExtensions = array_filter($requiredExtensions, function ($extension) {
-			return !extension_loaded($extension);
-		});
-
-		if (!empty($missingExtensions)) {
-			die('<h3>AXM Framework necesita que instale estas extensiones de php para operar: ' . (implode(', ', $missingExtensions)) . '</h3>');
-		}
-	}
-
 
 
 	/**
@@ -298,32 +224,6 @@ class Axm
 
 
 	/**
-	 * Método para cargar todos los archivos de forma automática
-	 *
-	 * @return void
-	 */
-	public static function autoload(string $class)
-	{
-
-		if (isset(self::$classMap[$class])) {
-			require self::$classMap[$class];
-
-			return true;
-		}
-
-		$classPath = ROOT_PATH . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
-
-		if (is_file($classPath)) {
-			require $classPath;
-			// Almacena la ruta en el mapa de clases
-			self::$classMap[$class] = $classPath;
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
 	 * @return string the version of AXM framework
 	 */
 	public static function getVersion()
@@ -405,20 +305,17 @@ class Axm
 		return self::$_app;
 	}
 
-
-	/**Devuelve la instancia del contenedor de servicios */
-	public static function getContainer()
-	{
-		return self::$_container ?? null;
-	}
-
-
+	/**
+	 * 
+	 */
 	public static function getEnvironment()
 	{
 		return static::$_environment;
 	}
 
-
+	/**
+	 * 
+	 */
 	public static function isProduction(): bool
 	{
 		return static::$_environment === AXM_ENV_PRODUCTION;
