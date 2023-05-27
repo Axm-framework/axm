@@ -369,5 +369,3 @@ class Axm
 		return $message;
 	}
 }
-
-// spl_autoload_register(['Axm', 'autoload']);

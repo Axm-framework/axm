@@ -76,7 +76,12 @@ abstract class Application
 	 */
 	private function openRoutesUser(): void
 	{
-		require_once APP_PATH . '/Config/Routes.php';
+		$ext = '.php';
+		$files = glob(ROOT_PATH . "/routes/*$ext");
+
+		foreach ($files as $file) {
+			include_once($file);
+		}
 	}
 
 	/**
