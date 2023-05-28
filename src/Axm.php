@@ -26,8 +26,6 @@ class Axm
 	 */
 	public static $classMap = [];
 
-	private static $configLoaded = false;
-
 	/**
 	 * Request path to use.
 	 *
@@ -69,19 +67,6 @@ class Axm
 
 
 	/**
-	 * Maneja y muestras las expeciones de la app 
-	 */
-	private static function handleException(\Throwable $e)
-	{
-		if (is_cli()) {
-			return self::throwCLIDisplay($e);
-		}
-
-		return AxmException::handleException($e);
-	}
-
-
-	/**
 	 * Initializes the error handlers.
 	 */
 	protected static function initSystemHandlers()
@@ -97,19 +82,21 @@ class Axm
 
 
 	/**
-	 * Muestra las exepciones tipo html
+	 * Maneja y muestras las expeciones de la app 
 	 */
-	public static function displayException(\Throwable $e)
+	private static function handleException(\Throwable $e)
 	{
-		if (static::isProduction()) {
-			echo '<h1>' . get_class($e) . "</h1>\n";
-			echo '<p>' . $e->getMessage() . ' (' . $e->getFile() . ':' . $e->getLine() . ')</p>';
-			echo '<pre>' . $e->getTraceAsString() . '</pre>';
-		} else {
-			echo '<h1>' . get_class($e) . "</h1>\n";
-			echo '<p>' . $e->getMessage() . '</p>';
+		// disable error capturing to avoid recursive errors
+		restore_error_handler();
+		restore_exception_handler();
+
+		if (is_cli()) {
+			return self::throwCLIDisplay($e);
 		}
+
+		return AxmException::handleException($e);
 	}
+
 
 	/**
 	 * Displays the captured PHP error.
@@ -120,35 +107,25 @@ class Axm
 	 * @param string $file error file
 	 * @param string $line error line
 	 */
-	public static function handleError($code, $message, $file, $line)
+	public static function handleError($code, $msg, $file, $line)
 	{
-		if (static::isProduction()) {
-			echo "<h1>PHP Error [$code]</h1>\n";
-			echo "<p>$message ($file:$line)</p>\n";
-			echo '<pre>';
+		// disable error capturing to avoid recursive errors
+		restore_error_handler();
+		restore_exception_handler();
 
-			$trace = debug_backtrace();
-			// skip the first 2 stacks as they are always irrelevant
-			if (count($trace) > 2)
-				$trace = array_slice($trace, 2);
-			foreach ($trace as $i => $t) {
-				if (!isset($t['file']))
-					$t['file'] = 'unknown';
-				if (!isset($t['line']))
-					$t['line'] = 0;
-				if (!isset($t['function']))
-					$t['function'] = 'unknown';
-				echo "#$i {$t['file']}({$t['line']}): ";
-				if (isset($t['object']) && is_object($t['object']))
-					echo get_class($t['object']) . '->';
-				echo "{$t['function']}()\n";
-			}
+		$e = (object) [
+			'code'    => $code,
+			'message' => $msg ?? '(null)',
+			'file'    => $file,
+			'line'    => $line,
+			'traces'  => debug_backtrace()
+		];
 
-			echo '</pre>';
-		} else {
-			echo "<h1>PHP Error [$code]</h1>\n";
-			echo "<p>$message</p>\n";
+		if (is_cli()) {
+			return self::throwCLIDisplay($e);
 		}
+
+		return AxmException::handleError($e);
 	}
 
 
@@ -159,6 +136,7 @@ class Axm
 	{
 		return AxmCLIException::handleCLIException($e);
 	}
+
 
 
 	/**
@@ -212,9 +190,6 @@ class Axm
 	 * @param mixed $config application configuration.
 	 * If a string, it is treated as the path of the file that contains the configuration;
 	 * If an array, it is the actual configuration information.
-	 * Please make sure you specify the {@link Application::basePath basePath} property in the configuration,
-	 * which should point to the directory containing all application logic, template and data.
-	 * If not, the directory will be defaulted to 'protected'.
 	 * @return Console
 	 */
 	public static function createConsoleApplication($config = null)

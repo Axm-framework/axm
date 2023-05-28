@@ -74,7 +74,7 @@ abstract class Application
 	/**
 	 * Open the user routes configuration file
 	 */
-	private function openRoutesUser(): void
+	public function openRoutesUser(): void
 	{
 		$ext = '.php';
 		$files = glob(ROOT_PATH . "/routes/*$ext");

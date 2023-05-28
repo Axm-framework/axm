@@ -349,7 +349,7 @@
       $dir = (!empty($dir)) ? rtrim($dir, '\/') . '/' : '';
 
       // Concatenate PUBLIC_PATH and $dir to form the full URL of the current site with the directory appended
-      $url = generateUrl(PUBLIC_PATH . $dir);
+      $url = generateUrl(ROOT_PATH . '/resources/' . $dir);
 
       // Return the URL
       return $url;
@@ -807,9 +807,6 @@
 
         case strpos($path, AXM_PATH) === 0:
           return AXM_PATH . DIRECTORY_SEPARATOR . substr($path, strlen(AXM_PATH));
-
-        case strpos($path, PUBLIC_PATH) === 0:
-          return PUBLIC_PATH . DIRECTORY_SEPARATOR . substr($path, strlen(PUBLIC_PATH));
 
         case defined('VENDOR_PATH') && strpos($path, VENDOR_PATH) === 0:
           return VENDOR_PATH . DIRECTORY_SEPARATOR . substr($path, strlen(VENDOR_PATH));

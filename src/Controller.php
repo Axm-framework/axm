@@ -34,7 +34,7 @@ abstract class Controller
     /**
      * @var BaseMiddleware[]
      */
-    protected array $middlewares = [];
+    protected ?array $middlewares = [];
 
 
     public function __construct()
