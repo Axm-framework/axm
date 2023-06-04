@@ -55,58 +55,58 @@ abstract class Model extends DbModel
 
     protected $errorMessage =
     [
-        'required'   => 'The field {field} is required',
+        'required'   => 'The field {{field}} is required',
         'email'      => 'The field must be valid email address',
-        'min'        => 'Min length of the field {field} must be {min}',
-        'max'        => 'Max length of the field {field} must be {max}',
-        'match'      => 'The field must be the same as {match}',
-        'size'       => 'Size of the {field} must be {size}',
-        'equals'     => 'Este campo debe ser igual al campo {field}',
-        'compare'    => 'The field {field} not is {operator} to field {value}',
-        'unique'     => 'Record with The {field} already exists',
-        'alpha'      => 'The field {field} is text',
-        'alnum'      => 'The field {field} is alphanumeric',
-        'numeric'    => 'The field {field} is numeric',
+        'min'        => 'Min length of the field {{field}} must be {{min}}',
+        'max'        => 'Max length of the field {{field}} must be {{max}}',
+        'match'      => 'The field must be the same as {{match}}',
+        'size'       => 'Size of the {{field}} must be {{size}}',
+        'equals'     => 'Este campo debe ser igual al campo {{field}}',
+        'compare'    => 'The field {{field}} not is {{operator}} to field {{value}}',
+        'unique'     => 'Record with The {{field}} already exists',
+        'alpha'      => 'The field {{field}} is text',
+        'alnum'      => 'The field {{field}} is alphanumeric',
+        'numeric'    => 'The field {{field}} is numeric',
         'phone'      => 'Este formato de telefono es incorrecto',
         'file'       => 'File invalid',
-        'number'     => 'The field {field} is number',
-        'positive'   => 'The field {field} is positive number',
-        'negative'   => 'The field {field} is positive negative',
-        'decimal'    => 'The field {field} is decimal',
-        'int'        => 'The field {field} is int',
-        'nif'        => 'The field {field} is nif',
-        'array'      => 'The field {field} is array',
-        'string'     => 'The field {field} is string',
-        'postalcode' => 'The field {field} is invalid',
-        'dir'        => 'The field {field} is dir',
-        'lower'      => 'The field {field} is lower',
-        'uppercase'  => 'The field {field} is uppercase',
-        'consonant'  => 'The field {field} is consonant',
-        'date'       => 'The field {field} is date',   //revisar
-        'time'       => 'The field {field} is time',   //revisar
-        'slug'       => 'The field {field} is slug',
-        'finite'     => 'The field {field} is finite',
-        'infinite'   => 'The field {field} is infinite',
-        'isbn'       => 'The field {field} is isbn',
-        'iban'       => 'The field {field} is incorrect',
-        'nif'        => 'The field {field} is incorrect',
-        'fibonacci'  => 'The field {field} is number fibonacci',
-        'null'       => 'The field {field} is null',
-        'url'        => 'The field {field} is url',
+        'number'     => 'The field {{field}} is number',
+        'positive'   => 'The field {{field}} is positive number',
+        'negative'   => 'The field {{field}} is positive negative',
+        'decimal'    => 'The field {{field}} is decimal',
+        'int'        => 'The field {{field}} is int',
+        'nif'        => 'The field {{field}} is nif',
+        'array'      => 'The field {{field}} is array',
+        'string'     => 'The field {{field}} is string',
+        'postalcode' => 'The field {{field}} is invalid',
+        'dir'        => 'The field {{field}} is dir',
+        'lower'      => 'The field {{field}} is lower',
+        'uppercase'  => 'The field {{field}} is uppercase',
+        'consonant'  => 'The field {{field}} is consonant',
+        'date'       => 'The field {{field}} is date',   //revisar
+        'time'       => 'The field {{field}} is time',   //revisar
+        'slug'       => 'The field {{field}} is slug',
+        'finite'     => 'The field {{field}} is finite',
+        'infinite'   => 'The field {{field}} is infinite',
+        'isbn'       => 'The field {{field}} is isbn',
+        'iban'       => 'The field {{field}} is incorrect',
+        'nif'        => 'The field {{field}} is incorrect',
+        'fibonacci'  => 'The field {{field}} is number fibonacci',
+        'null'       => 'The field {{field}} is null',
+        'url'        => 'The field {{field}} is url',
         'card'       => 'The number card invalid',
-        'true'       => 'The field {field} is true',
-        'false'      => 'The field {field} is false',
-        'json'       => 'The field {field} is json',
-        'leapdate'   => 'The field {field} is leapdate',
-        'leapyear'   => 'The field {field} is leadyear',
-        'mac'        => 'The field {field} is mac address',
-        'oject'      => 'The field {field} is object',
-        'odd'        => 'The field {field} is odd', //si es par
-        'pis'        => 'The field {field} is pis',
-        'link'       => 'The field {field} is link',
+        'true'       => 'The field {{field}} is true',
+        'false'      => 'The field {{field}} is false',
+        'json'       => 'The field {{field}} is json',
+        'leapdate'   => 'The field {{field}} is leapdate',
+        'leapyear'   => 'The field {{field}} is leadyear',
+        'mac'        => 'The field {{field}} is mac address',
+        'oject'      => 'The field {{field}} is object',
+        'odd'        => 'The field {{field}} is odd', //si es par
+        'pis'        => 'The field {{field}} is pis',
+        'link'       => 'The field {{field}} is link',
 
         //not
-        '!required'   => 'The field {field} no is required',
+        '!required'   => 'The field {{field}} no is required',
         '!email'      => 'The field no must be valid email address',
         '!alpha'      => 'The field no is text',
         '!alnum'      => 'The field no is alphanumeric',
@@ -171,8 +171,8 @@ abstract class Model extends DbModel
      */
     // public function validate($data = null)
     // {
-    //     $this->data = $this->data ?? $data ?? Axm::app()->request->post();     //$_POST
-    //     $this->loadData ?? $this->loadData($this->data);                      //carga los datos si no se han cargado
+    //     $this->data = $this->data ?? $data ?? Axm::app()->request->post();         //$_POST
+    //     $this->loadData ?? $this->loadData($this->data);                          //carga los datos si no se han cargado
     //     if ($this->startValidation())                                            //inicia la validación
     //         return true;
     //     else
@@ -593,30 +593,28 @@ abstract class Model extends DbModel
 
 
     /**
-     * Itancia la clase rule y verifica si existe.
+     * Intancia la clase rule y verifica si existe.
      * */
     public function classValidation(string $classRuleName)
     {
-        $class = "Axm\\Validation\\Rules\\" . ucfirst($classRuleName);
+        $class = 'Axm\\Validation\\Rules\\' . ucfirst($classRuleName);
         if (!class_exists($class)) {
             return;
         }
 
         $this->classValidate = new $class;
 
-        $method = "validate";
+        $method = 'validate';
         if (!method_exists($this->classValidate, $method)) {
 
-            throw new AxmException(Axm::t("Axm", 'El método "{method}" no existe en la clase "{class}".', [
-                "{method}" => $method,
-                "{class}" => $class,
+            throw new AxmException(Axm::t('Axm', 'El método "%s" no existe en la clase "%s".', [
+                $method, $class
             ]));
-
-            return;
         }
 
         return $this->classValidate;
     }
+
 
     /**
      * Resets the class to a blank slate. Should be called whenever
@@ -629,7 +627,6 @@ abstract class Model extends DbModel
 
         return $this;
     }
-
 
 
     /**
@@ -660,9 +657,9 @@ abstract class Model extends DbModel
     protected function addErrorByRule(string $field, string $rule, array $params = [])
     {
         $params['field'] = $field;
-        $errorMessage = strtr($this->errorMessage[$rule], $params);
+        $errorMessage    = strtr($this->errorMessage[$rule], $params);
         $this->errors[$field][] = [
-            'rule' => $rule,
+            'rule'    => $rule,
             'message' => $errorMessage
         ];
 
@@ -707,53 +704,11 @@ abstract class Model extends DbModel
     {
         $message = $message ?: $this->errorMessages[$rule];
         $this->errors[$field][] = [
-            'rule' => $rule,
+            'rule'    => $rule,
             'message' => $message
         ];
         $this->rules[] = $this->rule = $rule;
         $this->countOccurrencesErrors($rule);
-    }
-
-
-
-    /**
-     * Esta funcion sirve para contar las ocurrencias de cada rules
-     * @param string $rule
-     * */
-    public function countOccurrencesErrors(string $rule = null)
-    {
-        if (!empty($rule)) :
-            $_SESSION['__occurrencesErrors' . $rule] ??= 0;
-            ++$_SESSION['__occurrencesErrors' . $rule];
-            $this->countErrors = [
-                'rule'  => $rule,
-                'count' => $_SESSION['__occurrencesErrors' . $rule],
-            ];
-            return (int) ($this->countErrors) ?? 0;
-        endif;
-
-        return false;
-    }
-
-
-    /**
-     * Esta funcion sirve para resetear la cuenta de ocurrencia de erroes de una rule.
-     * */
-    public function resetCountError(string $rule)
-    {
-        unset($_SESSION['__occurrencesErrors' . $rule]);
-    }
-
-
-    /**
-     * Esta funcion sirve para resetear la cuenta de ocurrencia de erroes de una rule
-     * */
-    public function resetCountErrors(array $rules)
-    {
-        foreach ($rules as $rule) :
-            if (array_key_exists('__occurrencesErrors' . $rule, $_SESSION))
-                unset($_SESSION['__occurrencesErrors' . $rule]);
-        endforeach;
     }
 
 
@@ -807,7 +762,7 @@ abstract class Model extends DbModel
     public function setError(string $field, string $rule, string $newMessage)
     {
         $addError = [
-            'rules'  => $rule,
+            'rules'   => $rule,
             'message' => $newMessage
         ];
         $this->errors[$field] = $addError;
@@ -853,9 +808,10 @@ abstract class Model extends DbModel
         $errors = $this->errors ?? '';
 
         if (!empty($errors) && is_array($errors)) {
-            $error = array_values($errors);
+            $error    = array_values($errors);
             [$errors] = $error;
         }
+
         return (string) isset($errors['message']) ? $errors['message'] : '';
     }
 
@@ -879,29 +835,20 @@ abstract class Model extends DbModel
      */
     private function init()
     {
-        // Axm::app()->config()->load(APP_PATH . '/Config/DataBase.php');
-        // $db = Axm::app()->config()->get('DB');
-        // Axm::app()->load('Config.DataBase');
-        // Axm::app()->db;
+
         Axm::app()->config(APP_PATH . '/Config/DataBase.php');
-        // dd(
-        //     Axm::config('db'),
-        //     Axm::app()->config()->get('DB')
-        // );
 
         $db = Axm::app()->config()->get('DB');
-        // var_dump(
-        //     $this->getInstanceDb($db)
-        // );
+
         Axm::app('db', function () use ($db) {
             return static::getInstanceDb($db);
         });
-
-        // Axm::app()->
-        // Axm::app()->db = self::getInstanceDb($db); //crea la conexion
     }
 
-
+    
+    /**
+     * 
+     */
     private function startValidation(): bool
     {
         if ($this->skipValidation) {
@@ -929,7 +876,7 @@ abstract class Model extends DbModel
     private function extractRules(string $rulePack): array
     {
         $rulePack = strpos($rulePack, $this->separator) === false ? $rulePack . $this->separator : $rulePack;
-        $rules = explode($this->separator, $rulePack);
+        $rules    = explode($this->separator, $rulePack);
 
         return array_map(function ($value) {
             return str_replace(' ', '', $value);
