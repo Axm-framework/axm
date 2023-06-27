@@ -1,5 +1,5 @@
 {
-    "name": "axm/app",
+    "name": "axm/framework",
     "type": "framework",
     "description": "The AXM framework PHP",
     "keywords": [
@@ -23,14 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\Commands\\": "App/Commands/",
-            "App\\Config\\": "App/Config/",
-            "App\\Database\\": "App/Database/",
-            "App\\Middlewares\\": "App/Middlewares/",
-            "App\\Views\\": "App/Views/",
-            "App\\Models\\": "App/Models/",
-            "App\\Controllers\\": "App/Controllers/",
-            "App\\LiveAxm\\": "App/LiveAxm/"
+		"Axm\\": "src"
 		},
 		"files": [
 			"src/Axm.php"
