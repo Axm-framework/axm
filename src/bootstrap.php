@@ -34,6 +34,7 @@ const AXM_ENV_PRODUCTION = 'production';
 const AXM_ENV_DEBUG = 'debug';
 
 require_once('axm_helper.php');
+require_once(VENDOR_PATH . '/vlucas/phpdotenv/src/Dotenv.php');
 
 try {
     \Dotenv\Dotenv::createImmutable(ROOT_PATH)->load();
