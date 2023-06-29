@@ -3,7 +3,7 @@
   use Axm\Application;
   use Axm\Exception\AxmException;
   use Axm\I18n\I18n;
-  use Axm\LiveAxm\LiveaxmManager;
+  use Axm\LiveAxm\RaxmManager;
   use Axm\Views\View;
 
 
@@ -36,14 +36,14 @@
 
     function liveaxm(string $component)
     {
-      return LiveaxmManager::initialComponent($component);
+      return RaxmManager::initialComponent($component);
     }
   }
 
 
   function liveaxmScripts()
   {
-    return LiveaxmManager::liveaxmScripts();
+    return RaxmManager::liveaxmScripts();
   }
 
   if (!function_exists('view')) {
