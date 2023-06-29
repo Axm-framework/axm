@@ -3,7 +3,7 @@
   use Axm\Application;
   use Axm\Exception\AxmException;
   use Axm\I18n\I18n;
-  use Axm\LiveAxm\RaxmManager;
+  use Axm\Raxm\RaxmManager;
   use Axm\Views\View;
 
 
