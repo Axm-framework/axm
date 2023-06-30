@@ -32,9 +32,9 @@
     }
   }
 
-  if (!function_exists('liveaxm')) {
+  if (!function_exists('raxm')) {
 
-    function liveaxm(string $component)
+    function raxm(string $component)
     {
       return RaxmManager::initialComponent($component);
     }
