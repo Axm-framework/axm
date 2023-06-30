@@ -41,9 +41,9 @@
   }
 
 
-  function liveaxmScripts()
+  function raxmScripts()
   {
-    return RaxmManager::liveaxmScripts();
+    return RaxmManager::raxmScripts();
   }
 
   if (!function_exists('view')) {
@@ -53,7 +53,7 @@
       return Axm::app()->controller->renderView($view, $params, $buffer, $ext);
     }
   }
-
+  
   if (!function_exists('section')) {
 
     function section(string $name)
@@ -292,7 +292,7 @@
 
     function setFlash(string $type, string $message)
     {
-      return  Axm::app()->session->setFlash($type, $message);
+      return Axm::app()->session->setFlash($type, $message);
     }
   }
 
