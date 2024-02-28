@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Axm command-line tools
+ *
+ * This script is the main entry point into the CLI system and allows you to run
+ * commands and perform maintenance on your application.
+ */
+
+// Checks if it is executed from the command line
+if (PHP_SAPI !== 'cli') {
+    exit("This script can only be run from the command line!\n\n");
+}
+
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'bootstrap.php';
+
+//The console application instance.
+$console = app()->createConsoleApplication();
+
+// Execute console command
+$console->run();

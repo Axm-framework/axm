@@ -1,0 +1,71 @@
+{
+    "name": "axm/axm",
+    "type": "framework",
+    "description": "The AXM framework PHP",
+    "keywords": [
+        "framework",
+        "mvc",
+        "rapid development",
+        "web development",
+        "axm",
+        "orm",
+        "form",
+        "validation",
+        "psr"
+    ],
+    "homepage": "https://axmphp.com",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-xml": "*",
+        "ext-openssl": "*",
+        "ext-zip": "*",
+        "ext-mbstring": "*",
+        "ext-intl": "*",
+        "filp/whoops": "^2.15.4",
+        "illuminate/database": "^10.45.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Commands\\": "app/commands/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Database\\": "app/database/",
+            "App\\Database\\Seeds\\": "app/database/seeds/",
+            "App\\Database\\Schema\\": "app/database/schema/",
+            "App\\Database\\Factories\\": "app/database/factories/",
+            "App\\Database\\Migrations\\": "app/database/migrations/",
+            "App\\Middlewares\\": "app/middlewares/",
+            "App\\Models\\": "app/models/",
+            "App\\Raxm\\": "app/raxm/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": false
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "pre-update-cmd": [
+            "@php -r \"if (strpos(file_get_contents('composer.json'), 'axm/axm') === false) { echo 'Excluding axm/axm from update.'; file_put_contents('composer.json', str_replace('\"update\": [', '\"update\": [\"--no-plugins\", \"--ignore-platform-reqs\",', file_get_contents('composer.json'))); }\""
+        ],
+        "post-create-project-cmd": [
+            "@php axm key:generate --force"
+        ]
+    },
+    "support": {
+        "forum": "http://forum.axmphp.com/",
+        "source": "https://github.com/axm-framework/app",
+        "slack": "https://axmchat.slack.com"
+    }
+}
