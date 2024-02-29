@@ -352,3 +352,31 @@ Date: 28-02-2024 00:37:31    Axm Framework version: 1    PHP version: 8.2.4
 ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 
+##Error: Class "Whoops\Run" not found
+trace: 
+
+#0 C:\xampp\htdocs\aa\axm\core\HandlerErrors.php(23): handleWebError(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#1 C:\xampp\htdocs\aa\axm\core\HandlerErrors.php(8): handlerErrors(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#2 C:\xampp\htdocs\aa\axm\core\bootstrap.php(41): {closure}(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#3 C:\xampp\htdocs\aa\axm\core\bootstrap.php(41): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\aa\axm\public\index.php(16): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\aa\axm\index.php(12): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+Date: 29-02-2024 11:44:17    Axm Framework version: 1    PHP version: 8.2.4
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+
+##Error: Class "Whoops\Run" not found
+trace: 
+
+#0 C:\xampp\htdocs\aa\axm\core\HandlerErrors.php(23): handleWebError(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#1 C:\xampp\htdocs\aa\axm\core\HandlerErrors.php(8): handlerErrors(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#2 C:\xampp\htdocs\aa\axm\core\bootstrap.php(41): {closure}(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 41)
+#3 C:\xampp\htdocs\aa\axm\core\bootstrap.php(41): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\aa\axm\public\index.php(16): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\aa\axm\index.php(12): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+Date: 29-02-2024 11:44:27    Axm Framework version: 1    PHP version: 8.2.4
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+

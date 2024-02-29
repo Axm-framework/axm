@@ -1,2 +1,14 @@
-*
-!.gitignore
+/vendor
+/node_modules
+/composer.lock
+/.phpunit.cache
+/public/build
+/storage/*.key
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+/.phpunit.cache
+.phpunit.result.cache
+.env
