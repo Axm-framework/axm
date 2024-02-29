@@ -24,7 +24,6 @@
 </p>
 
 <br>
-<br>
 
 ## ⚡️ In bed, size doesn't matter; web, speed does
 
