@@ -58,7 +58,7 @@ if (!function_exists('url')) {
     }
 }
 
-function env(string $params, string $default = null)
+function env(string $params, string|bool $default = null)
 {
     $env = Env::get($params, $default);
     return $env ?? $default;

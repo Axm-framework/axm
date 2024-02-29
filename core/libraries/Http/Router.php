@@ -263,13 +263,11 @@ class Router
      */
     public function dispatch()
     {
-        if (!is_cli()) {
-            $this->method   = strtoupper($_SERVER['REQUEST_METHOD']);
-            $this->uri      = $this->getUri();
-            $this->callback = $this->getRouteCallback($this->method, $this->uri);
+        $this->method   = strtoupper($_SERVER['REQUEST_METHOD']);
+        $this->uri      = $this->getUri();
+        $this->callback = $this->getRouteCallback($this->method, $this->uri);
 
-            return $this->callback ? $this->resolve($this->callback) : $this->notRouteRegistered();
-        }
+        return $this->callback ? $this->resolve($this->callback) : $this->notRouteRegistered();
     }
 
     /**

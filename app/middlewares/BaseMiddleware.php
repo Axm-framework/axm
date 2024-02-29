@@ -19,8 +19,8 @@ abstract class BaseMiddleware
      * @var array
      */
     public static $httpMiddlewares = [
-        \Axm\Middlewares\MaintenanceMiddleware::class,
-        \Axm\Middlewares\VerifyCsrfTokenMiddleware::class,
-        \Axm\Middlewares\AuthMiddleware::class,
+        \Middlewares\MaintenanceMiddleware::class,
+        \Middlewares\VerifyCsrfTokenMiddleware::class,
+        \Middlewares\AuthMiddleware::class,
     ];
 }
