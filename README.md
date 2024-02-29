@@ -5,9 +5,23 @@
   <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/axm/axm/v/stable)](https://packagist.org/packages/axm/axm)
-[![Total Downloads](https://poser.pugx.org/axm/axm/downloads)](https://packagist.org/packages/axm/axm)
-[![License](https://poser.pugx.org/axm/axm/license)](https://packagist.org/packages/axm/axm)
+<p align="center">
+ <a href="https://packagist.org/packages/axm/axm"
+  ><img
+   src="https://poser.pugx.org/axm/axm/v/stable"
+   alt="Latest Stable Version"
+ /></a>
+ <a href="https://packagist.org/packages/axm/axm"
+  ><img
+   src="https://poser.pugx.org/axm/axm/downloads"
+   alt="Total Downloads"
+ /></a>
+ <a href="https://packagist.org/packages/axm/axm"
+  ><img
+   src="https://poser.pugx.org/axm/axm/license"
+   alt="License"
+ /></a>
+</p>
 
 <br>
 <br>
