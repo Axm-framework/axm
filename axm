@@ -12,9 +12,8 @@ if (PHP_SAPI !== 'cli') {
     exit("This script can only be run from the command line!\n\n");
 }
 
-require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'axm' .
-    DIRECTORY_SEPARATOR . 'framework' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR .
-    'bootstrap.php';
+require_once 'vendor' . DIRECTORY_SEPARATOR . 'axm' . DIRECTORY_SEPARATOR .
+    'framework' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 //The console application instance.
 $console = app()->createConsoleApplication();
