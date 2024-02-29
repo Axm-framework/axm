@@ -1,38 +1,14 @@
-vendor
-composer.lock
-
-#-------------------------
-# IDE / Development Files
-#-------------------------
-
-# phpenv local config
-.php-version
-
-# Jetbrains editors (PHPStorm, etc)
-.idea/
-*.iml
-
-# Netbeans
-nbproject/
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-.nb-gradle/
-
-# Sublime Text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
-.phpintel
-/api/
-
-# Visual Studio Code
-.vscode/
-
-/results/
+/.phpunit.cache
+/node_modules
+/public/build
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
 .phpunit.result.cache
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
