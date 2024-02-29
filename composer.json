@@ -25,8 +25,7 @@
         "ext-zip": "*",
         "ext-mbstring": "*",
         "ext-intl": "*",
-        "filp/whoops": "^2.15.4",
-        "illuminate/database": "^10.45.1"
+        "axm/framework": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.3.5"

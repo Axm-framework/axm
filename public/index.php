@@ -13,7 +13,9 @@
 define('AXM_BEGIN_TIME', microtime(true));
 
 // Include autoload
-require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'bootstrap.php';
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'axm' .
+    DIRECTORY_SEPARATOR . 'framework' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR .
+    'bootstrap.php';
 
 // Initialize the application
 $app = app();
