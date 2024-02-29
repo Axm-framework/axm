@@ -1,6 +1,9 @@
-<center>
-  <img src="https://github.com/Axm-framework/axm/blob/main/public/axm.png" alt="Logo">
-</center>
+<!-- markdownlint-disable no-inline-html -->
+<p align="center">
+  <br><br>
+  <img src="https://github.com/Axm-framework/axm/blob/main/public/axm.png" height="120" alt="Logo"/>
+  <br>
+</p>
 
 [![Latest Stable Version](https://poser.pugx.org/axm/axm/v/stable)](https://packagist.org/packages/axm/axm)
 [![Total Downloads](https://poser.pugx.org/axm/axm/downloads)](https://packagist.org/packages/axm/axm)
