@@ -67,7 +67,7 @@ One of the main advantages of Axm is its simplicity and ease of use. The framewo
 
 ### The problems
 
-Although PHP frameworks can improve the efficiency of web development, it is crucial to recognize the challenges and limitations they present. Here are some additional problems commonly associated with contemporary PHP frameworks:
++ Although PHP frameworks can improve the efficiency of web development, it is crucial to recognize the challenges and limitations they present. Here are some additional problems commonly associated with contemporary PHP frameworks:
 
 1. **Steep learning curve:** PHP frameworks often carry a demanding learning curve, especially for developers who are unfamiliar with the conventions of the framework or the language itself. Becoming proficient in the intricate concepts and functionality of a framework takes time and effort.
 
@@ -83,7 +83,7 @@ Understanding these potential challenges associated with PHP frameworks is essen
 
 ### How Axm tackles these
 
-Axm excels at solving common problems found in PHP frameworks through a number of technical features and specific approaches:
++ Axm excels at solving common problems found in PHP frameworks through a number of technical features and specific approaches:
 
 1. **Ease of learning:** Axm is designed to be the most accessible and easy-to-learn framework. Even developers new to PHP can start creating powerful applications in a matter of minutes by reading the documentation or following tutorials. Axm requires only basic knowledge of PHP.
 
