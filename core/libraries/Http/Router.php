@@ -303,8 +303,8 @@ class Router
      */
     private function resolve($callback)
     {
-        // $middleware = $this->app->controller->getMiddlewares();
-        // $this->executeMiddlewares($middleware);
+        $middleware = $this->app->controller->getMiddlewares();
+        $this->executeMiddlewares($middleware);
 
         return match (true) {
             is_callable($callback) => $this->callCallback($callback),       // if  it's callable - just execute

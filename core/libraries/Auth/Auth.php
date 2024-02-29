@@ -43,7 +43,7 @@ class Auth
 		$this->app = $app;
 
 		$this->session = $app->session;
-		$this->userClass = $app->config->app->userClass;
+		$this->userClass = config('app.userClass');
 		$this->usernameField = $usernameField;
 		$this->passwordField = $passwordField;
 	}
