@@ -3,7 +3,7 @@
 return [
     /**
      ---------------------------------------------------------------
-       APP PROVIDERS
+      APP PROVIDERS
      ---------------------------------------------------------------
      *
      * Here will be registered the classes of the providers that will 
