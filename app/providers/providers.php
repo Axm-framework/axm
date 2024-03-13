@@ -3,7 +3,7 @@
 return [
     /**
      ---------------------------------------------------------------
-      APP PROVIDERS
+       APP PROVIDERS
      ---------------------------------------------------------------
      *
      * Here will be registered the classes of the providers that will 
@@ -22,7 +22,7 @@ return [
     'validator'  => Validation\Validator::class,
     'auth'       => Auth\Auth::class,
     'console'    => Console\ConsoleApplication::class,
-    'raxm'       => Axm\Raxm\Raxm::class,
+    'raxm'       => Raxm\Raxm::class,
     // 'event'      => EventManager::class,
     // 'cache'      => Cache\Cache::class,
 ];
