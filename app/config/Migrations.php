@@ -32,7 +32,7 @@ return [
      *
      * This is the format that will be used when creating new migrations
      * using the CLI command:
-     *   > php axm make:migrate
+     *  > php axm make:migrate
      *
      * Typical formats:
      * - YmdHis_

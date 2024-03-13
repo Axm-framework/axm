@@ -5,7 +5,6 @@ use Cache\Drivers\FileCache;
 
 return [
 
-
     /**
     --------------------------------------------------------------------------
       PRIMARY HANDLER
