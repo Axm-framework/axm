@@ -10,7 +10,7 @@ return [
      * be loaded at the start of the system, these will only be stored 
      * in the application container and will be consumed on demand.    
      **/
-    'app'        => App::class,
+    // 'app'        => App::class,
     'config'     => Config::class,
     'session'    => Session\Session::class,
     'request'    => Http\Request::class,
