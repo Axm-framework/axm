@@ -50,8 +50,6 @@ return [
      * Your Memcached servers can be specified below, if you are using
      * the Memcached drivers.
      *
-     * @see https://Axm.com/user_guide/libraries/caching.html#memcached
-     *
      * @var array<string, boolean|int|string>
      */
     'memcached' => [
