@@ -22,5 +22,8 @@ abstract class BaseMiddleware
         \Middlewares\MaintenanceMiddleware::class,
         \Middlewares\VerifyCsrfTokenMiddleware::class,
         \Middlewares\AuthMiddleware::class,
+
+        // more middleware here ...
+
     ];
 }
