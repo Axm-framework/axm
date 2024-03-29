@@ -9,50 +9,36 @@ class HelloCommand extends BaseCommand
 {
     /**
      * The Command's Group
-     *
-     * @var string
      */
-    protected $group = 'App';
+    protected string $group = 'App';
 
     /**
      * The Command's Name
-     *
-     * @var string
      */
-    protected $name = 'hello';
+    protected string $name = 'hello';
 
     /**
      * The Command's Description
-     *
-     * @var string
      */
-    protected $description = 'Displays a "hello world!" on console';
+    protected string $description = 'Displays a "hello world!" on console';
 
     /**
      * The Command's Usage
-     *
-     * @var string
      */
-    protected $usage = 'hello [options]';
+    protected string $usage = 'hello [options]';
 
     /**
      * The Command's Arguments
-     *
-     * @var array
      */
-    protected $arguments = [];
+    protected array $arguments = [];
 
     /**
      * The Command's Options
-     *
-     * @var array
      */
-    protected $options = [];
+    protected array $options = [];
 
     /**
      * Actually execute a command.
-     *
-     * @param array $params
      */
     public function run(array $params)
     {
