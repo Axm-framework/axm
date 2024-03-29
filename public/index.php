@@ -18,12 +18,12 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPAR
     'bootstrap.php';
 
 // Initialize the application
-$app = app();
+$app = Axm::makeApplication();
 
-/*
- *--------------------------------------------------------------- 
- * LAUNCH THE APPLICATION 
- * --------------------------------------------------------------- 
+/**
+ --------------------------------------------------------------- 
+  LAUNCH THE APPLICATION 
+ --------------------------------------------------------------- 
  * Now that everything is set up, it's time to start the 
  * application.
  */

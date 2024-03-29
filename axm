@@ -16,7 +16,7 @@ require_once 'vendor' . DIRECTORY_SEPARATOR . 'axm' . DIRECTORY_SEPARATOR .
     'framework' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 //The console application instance.
-$console = app()->createConsoleApplication();
+$console = Axm::makeConsoleApplication();
 
 // Execute console command
 $console->run();
