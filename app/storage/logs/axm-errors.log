@@ -1,37 +1,13 @@
-##Error: Non-static method Axm\Views\View::file() cannot be called statically
-trace: 
 
-#0 C:\xampp\htdocs\axm\vendor\axm\console\src\GeneratorTrait.php(267): Axm\Raxm\Commands\MakeRaxm->renderTemplate(Array)
-#1 C:\xampp\htdocs\axm\vendor\axm\raxm\src\Commands\MakeRaxm.php(119): Axm\Raxm\Commands\MakeRaxm->parseTemplate('App\\Raxm\\Welcom...', Array)
-#2 C:\xampp\htdocs\axm\vendor\axm\console\src\GeneratorTrait.php(289): Axm\Raxm\Commands\MakeRaxm->prepare('App\\Raxm\\Welcom...', Array, Array)
-#3 C:\xampp\htdocs\axm\vendor\axm\console\src\GeneratorTrait.php(155): Axm\Raxm\Commands\MakeRaxm->buildContent('App\\Raxm\\Welcom...', Array, Array)
-#4 C:\xampp\htdocs\axm\vendor\axm\raxm\src\Commands\MakeRaxm.php(108): Axm\Raxm\Commands\MakeRaxm->execute(Array)
-#5 C:\xampp\htdocs\axm\vendor\axm\raxm\src\Commands\MakeRaxm.php(73): Axm\Raxm\Commands\MakeRaxm->createTemplate('component', NULL, 'App', 'Raxm', 'raxm.component....', Array)
-#6 C:\xampp\htdocs\axm\vendor\axm\console\src\Commands.php(63): Axm\Raxm\Commands\MakeRaxm->run(Array)
-#7 C:\xampp\htdocs\axm\vendor\axm\console\src\ConsoleApplication.php(86): Axm\Console\Commands->run('make:raxm', Array)
-#8 C:\xampp\htdocs\axm\axm(21): Axm\Console\ConsoleApplication->run()
-#9 {main}
-Date: 05-02-2024 10:15:09    Axm Framework version: 1.0.104.0    PHP version: 8.2.12
-••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+/**
+|_________________________________________________________________________________________________
+|
+|  _______                    _______                                                       __
+| |   _   |.--.--..--------. |    ___|.----..---.-..--------..-----..--.--.--..-----..----.|  |--.
+| |       ||_   _||        | |    ___||   _||  _  ||        ||  -__||  |  |  ||  _  ||   _||    <
+| |___|___||__.__||__|__|__| |___|    |__|  |___._||__|__|__||_____||________||_____||__|  |__|__|
+|
+|-------------------------------------------------------------------------------------------------|*/
 
-
-##Error: Missing required parameter renderer
-trace: 
-
-#0 C:\xampp\htdocs\axm\vendor\axm\framework\src\Container.php(279): Axm\Container->bindParams(Object(ReflectionMethod), Array)
-#1 C:\xampp\htdocs\axm\vendor\axm\framework\src\Container.php(242): Axm\Container->buildClass('Axm\\Views\\View', Array)
-#2 C:\xampp\htdocs\axm\vendor\axm\framework\src\Container.php(221): Axm\Container->resolveInstance('Axm\\Views\\View', Array)
-#3 C:\xampp\htdocs\axm\vendor\axm\framework\src\Container.php(257): Axm\Container->make('Axm\\Views\\View')
-#4 C:\xampp\htdocs\axm\vendor\axm\framework\src\Application.php(60): Axm\Container->initializeServices()
-#5 C:\xampp\htdocs\axm\vendor\axm\framework\src\Application.php(49): Axm\Application->preInit()
-#6 C:\xampp\htdocs\axm\vendor\axm\framework\src\Axm.php(149): Axm\Application->__construct(NULL)
-#7 C:\xampp\htdocs\axm\vendor\axm\framework\src\Axm.php(136): Axm::buildApplication('Axm\\initApplica...', NULL)
-#8 C:\xampp\htdocs\axm\vendor\axm\console\src\ConsoleApplication.php(49): Axm::startApplication()
-#9 C:\xampp\htdocs\axm\vendor\axm\framework\src\Axm.php(149): Axm\Console\ConsoleApplication->__construct(NULL)
-#10 C:\xampp\htdocs\axm\vendor\axm\framework\src\Axm.php(160): Axm::buildApplication('Axm\\Console\\Con...', NULL)
-#11 C:\xampp\htdocs\axm\axm(18): Axm::createConsoleApplication()
-#12 {main}
-Date: 08-02-2024 12:23:18    Axm Framework version: 1.0.105.0    PHP version: 8.2.12
-••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-
+ _________________________________________________________________________________________________
+ _________________________________________________________________________________________________ 
