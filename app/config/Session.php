@@ -14,7 +14,7 @@ return [
      * the session
      * @var int
      */
-    'expiration' => env('SESSION_LIFETIME', 3),
+    'expiration' => env('SESSION_LIFETIME', 120),
 
     /**
      --------------------------------------------------------------------------
@@ -74,4 +74,14 @@ return [
      */
     'secure' => env('SESSION_SECURE_COOKIE', false),
 
+    /**
+    --------------------------------------------------------------------------
+      SECURITY HEADER NAME
+    --------------------------------------------------------------------------
+     *
+     * Security Header Name
+     * The name of the security header used for cookie validation.
+     * @var string
+     */
+    'header_name_cookie' => env('SECURITY_HEADER_NAME', 'X-CSRF-TOKEN'), // default value
 ];
