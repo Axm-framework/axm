@@ -1,5 +1,6 @@
 {
     "name": "axm/axm",
+    "version": "1.0.34",
     "type": "framework",
     "description": "The AXM framework PHP",
     "keywords": [
